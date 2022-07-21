@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Routes, Route } from "react-router-dom";
+import Home from './Routes/HomePage/Home';
+import Autorization from './Routes/Nav-login/Autorization';
+import Login from './Routes/Nav-login/Login';
+import Nav from './Routes/Nav/Nav';
+import NavLogin from './Routes/Nav-login/Nav-login'
+import SupportPag from './Routes/SupportPag/SupportPag';
+import FAQ from './Routes/FAQ/FAQ';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+const App = () => {
+return (
+<>
+  <Routes>
+    <Route path='/' element={<Nav/>} >
+      <Route path="Home" element={<Home />} />
+      <Route path='SupportPag' element={<SupportPag/>} />
+      <Route path='FAQ' element={<FAQ/>} />
+
+    </Route>
+
+    <Route path='/n-l' element={<NavLogin/>} >
+      <Route path='login' element={<Login/>} />
+      <Route path='Autorization' element={<Autorization/>} />
+
+    </Route>
+  </Routes>
+</>
+)}
+export default App
