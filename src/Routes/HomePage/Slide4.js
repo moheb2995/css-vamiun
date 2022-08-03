@@ -5,7 +5,7 @@ import icon from '../../img/Group.png'
 const Slide4 = () => {
 return (
 <div className='flex justify-around'>
-  <div className="">
+  <div className="glow-img">
     <img className=" " src={img} />
   </div>
   

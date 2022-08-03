@@ -6,7 +6,7 @@ const Slide2 = () => {
 
 return (
 <div className='flex justify-around'>
-  <div className="">
+  <div className="glow-img">
     <img className=" " src={img} />
   </div>
   

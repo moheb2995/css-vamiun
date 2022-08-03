@@ -8,15 +8,18 @@ import Slide4 from './Slide4'
 const Home = () => {
 const [slide,setslide] = useState(1)
 
-useEffect(()=>{
-  setInterval(()=> setslide(slide + 1),5*1000)
-})
-if(slide === 5){
-  setslide(1)
-}
+// useEffect(()=>{
+//   setInterval(()=> setslide(slide + 1),5*1000)
+// })
+// if(slide === 5){
+//   setslide(1)
+// }
 
 return (
-<div>
+<>
+<div className="glow w-[350px] h-[280px] -mb-40 top-0 left-0 fixed"/>
+
+<div className=''>
   <div className="grid fixed left-8 top-52">
     <button className={slide === 1 ? 'select': 'not-select'} onClick={()=> setslide(1)}></button>
     <button className={slide === 2 ? 'select': 'not-select'} onClick={()=> setslide(2)}></button>
@@ -44,9 +47,11 @@ return (
       <div className="mx-14">حریم خصوصی</div>
       <div className="">شرایط و ضوابط</div>
     </div>
-    <div className="mr-20">{slide}از4</div>
+    <div className="mr-20 ">{slide}از4</div>
     <div className="ml-14">تمامی حق و حقوق این وب سایت محفوظ می باشد</div>
   </footer>
+  
 </div>
+</>
 )}
 export default Home

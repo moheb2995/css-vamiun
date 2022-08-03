@@ -6,8 +6,8 @@ const Slide3 = () => {
 
 return (
 <div className='flex justify-around'>
-  <div className="">
-    <img className=" " src={img} />
+  <div className="glow-img">
+    <img className="mt-20 " src={img} />
   </div>
   
   <div className="w-[41vw] mt-20" >

@@ -1,26 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer components{
+  select {@apply bg-gray-100  rounded-lg p-1}
+  tr {@apply bg-[#eae6e6] border-white border-y-8}
   .nav-but {@apply h-10 m-2 mx-4 }
-  .select {@apply bg-green-800 m-1 rounded-full w-4 h-7 }
-  .not-select {@apply bg-slate-300 m-1 w-4 h-4 rounded-full } 
-  .input {@apply mx-3 w-10 h-12 rounded}
+  .select {@apply bg-green-800 m-1 rounded-full w-[10px] h-[22px] }
+  .not-select {@apply bg-slate-300 m-1 w-[10px] h-[10px] rounded-full } 
+  .input {@apply mx-3 w-10 h-12 rounded bg-[#D6D6D6] text-center}
   .card {@apply border w-[48%] rounded-xl p-2 }
+  .card2 {@apply bg-[#F2F2F2] p-2.5 my-2 rounded-xl}
+  .card3 {@apply bg-[#F2F2F2] border1 border-2 px-4 py-3 text-sm mb-2}
   .blocked {@apply border border-[#C4C4C4] rounded-2xl p-4 m-4}
-  /*. {@apply }
-  . {@apply }
-  . {@apply }
-  . {@apply }
-  . {@apply }
-  . {@apply }
-  . {@apply }
-  . {@apply } */
+  .modals {@apply bg-white z-20 fixed top-[60vh] left-[40vw] p-10 text-xs rounded-xl}
+  .backdrop {@apply bg-black z-10 fixed top-0 left-0 opacity-30 w-[100vw] h-[100vh] text-center }
+  .nav {@apply my-2 p-1 }
+  .cell {@apply p-1 px-[14px] py-2 first:rounded-r-[20%] last:rounded-l-[18%]}
+  .cell1 {@apply px-[14.9px] py-2 first:rounded-r-[18%] last:rounded-l-[18%]}
+  .cell2 {@apply px-[28px] py-2 first:rounded-r-[18%] last:rounded-l-[18%]}
+  .cell3 {@apply px-[24px] py-[9px] first:rounded-r-[50%] last:rounded-l-[12%] }
+  .cell4 {@apply px-[11px] py-2 first:rounded-r-[18%] last:rounded-l-[18%]}
+  .cell5 {@apply px-[16.7px] py-2 first:rounded-r-[18%] last:rounded-l-[18%]}
+  .cell6 {@apply px-[21px] py-2 first:rounded-r-[500%] last:rounded-l-[18%]}
+  .border1 {@apply border-[#C4C4C4] border rounded-xl px-5 py-3.5 }
+  .title {@apply inline-block mr-1 font-bold }
+  .between {@apply flex justify-between}
+  .btn {@apply p-1 px-4 rounded-full}
+  .btn1 {@apply p-2 rounded-lg}
+  .btn2 {@apply bg-white text-2xl w-6 h-6 mt-1 flex justify-center rounded p-2 items-center}
+  .img {@apply inline-block w-5 p-1 rounded-md}
+  .col {@apply w-5 h-[180px] bg-[#F2F2F2] rounded-full}
+  .glow {@apply bg-[rgb(255,247,219)] -z-10 rounded-full shadow-[0px_0px_150px_150px_rgba(255,247,219)] }
+  .glow-img {@apply bg-[rgb(255,247,219)] -z-10 rounded-full shadow-[0px_0px_60px_60px_rgba(255,247,219)] w-[340px] h-[340px] }
+  /*. {@apply } */
+  /*. {@apply } */
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.bg-img{
+  background: url('./img/panel/Rectangle.png');
+  background-size: 100% 100%;
+}
+
+.figure{
+  margin: 0;
+  margin-bottom: 12px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  break-inside: avoid;
+}
+
+.container {
+  column-count: 2;
+  column-gap: 12px;
 }

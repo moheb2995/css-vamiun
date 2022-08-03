@@ -73,7 +73,7 @@ const FAQ = () => {
   }
 
   const list = arr.map(i => 
-  <div key={i.id} className={i.isSelect ?'blocked':'blocked h-auto  mt-auto'}>
+  <div key={i.id} className='blocked figure '>
     <div className='flex justify-between h-2 mb-9'>
       <div className='inline-block '>
         <img className='inline-block ml-1 ' src={Ellipse} alt="" />
@@ -85,14 +85,10 @@ const FAQ = () => {
         src={i.isSelect ? iconbot : iconTop} 
       />
     </div>
-    {
-      i.isSelect ? 
-      <div className=''>
-        <hr className='mb-4' />
-        <p className=''>{i.a}</p>
-      </div>
-      : ''
-    }
+    <div className={i.isSelect ? 'block' : 'hidden'}>
+      <hr className='mb-4' />
+      <p className=''>{i.a}</p>
+    </div> 
   </div>)
   
 return (
@@ -111,7 +107,7 @@ return (
     </div>
   </header>
 
-  <div className='p-6 grid grid-cols-2'>{list}</div>
+  <div className='container'>{list}</div>
     
     <footer className='flex justify-between text-xs my-6 '>
       <div className="flex">

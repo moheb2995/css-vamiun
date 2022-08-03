@@ -100,13 +100,13 @@ return (
   {
   success ?
   <>
-    <div className='bg-white z-20 w-54 h-auto fixed top-[60vh] left-[40vw] p-10 text-xs rounded-xl '>
+    <div className='modals '>
       <div className='text-left' onClick={()=>setsuccess(false)} >X</div>
       <div className='flex justify-center'><img src={Rectangle} alt="" /></div>
       <h2 className=''>پیغام شما به دست ما رسید!</h2>
       <p className=''>خیلی زود جوابتونو میدیم</p>
     </div>
-    <div className='bg-black z-10 fixed top-0 left-0 opacity-30 w-[100vw] h-[100vh] text-center ' onClick={()=>setsuccess(false)} ></div>
+    <div className='backdrop' onClick={()=>setsuccess(false)} ></div>
   </>
   : ''
   }
