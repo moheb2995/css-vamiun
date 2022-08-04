@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 export const counterSlice = createSlice({
   name: 'user',
   initialState:{
-    phoneNumber: '09128458202',
+    phoneNumber: '',
     data:[
       {
         name:'فرزانه خسروی',

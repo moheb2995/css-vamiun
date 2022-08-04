@@ -12,6 +12,11 @@ const Login = () => {
   const [checkbox,setcheckbox] = useState(true)
   const dispatch = useDispatch()
 
+  const handleNumChange = e => {
+    const limit = 11;
+    setnumber(e.target.value.slice(0, limit));
+  }
+
 return (
 <>
 <div className=''>
@@ -33,7 +38,11 @@ return (
           <img className='inline-block' src={icon} />
           <h5 className='inline-block mx-2 '>شماره موبایل</h5>
         </div>
-        <input className='w-[100%] mt-2 text-base' value={number} maxLength={11} minLength={11} onChange={(e)=>setnumber(e.target.value)} type="number" />
+        <input className='w-[100%] mt-2 text-base' 
+          value={number} maxLength={11}  
+          onChange={handleNumChange} 
+          type="number" 
+          />
       </div>
       {
         checkbox && number.length === 11  ? '' :
@@ -58,7 +67,7 @@ return (
         <Link to={'/n-l/Autorization'}>
           <button 
             className='text-white p-4 bg-[#00693B] w-[80%] rounded-3xl '
-            onClick={()=>dispatch(setnum)}
+            onClick={()=>dispatch(setnum(number))}
             >دریافت کد</button>
         </Link>
         :

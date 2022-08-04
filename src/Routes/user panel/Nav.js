@@ -54,7 +54,7 @@ return (
         :
         <div>
           <Link to={'Panel'}>
-            <img className='nav -mr-1' src={iconbox} alt="" />
+            <img className='nav w-20 -mr-1' src={iconbox} alt="" />
           </Link>
           <Link to={'Loans'}>
             <img className='nav' src={iconLoans} alt="" />
